@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rafi Songs</title>
+    <link rel="stylesheet" href="songs.css" />
+</head>
+<body>
+<audio id="bgMusic" loop>
+    <source src="suhaani_raat_instru.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<button id="musicBtn">🎵 Play Music</button>
+<header>
+    <h1 class="title">🎵 Mohammed Rafi Songs</h1>
+    <a href="Rafi.html" class="back-btn">⬅ Back to Home</a>
+</header>
+
+
+<div class="song-list">
+
+    <!-- SONG CARD 1 -->
+    <div class="song-card">
+        <img src="golden-vinyl-record-retro-music-vector-34099878 (1)-Photoroom (1).png" class="vinyl" />
+        <h2>Aaj Mausam Bada Bekaraar Hai</h2>
+        <button class="play-btn" data-link="https://www.youtube.com/watch?v=aSJ_jcEPOu0">▶ Play</button>
+    </div>
+
+    <!-- SONG CARD 2 -->
+    <div class="song-card">
+        <img src="golden-vinyl-record-retro-music-vector-34099878 (1)-Photoroom (1).png" class="vinyl" />
+        <h2>Chaudhvin Ka Chaand Ho</h2>
+        <button class="play-btn" data-link="https://www.youtube.com/watch?v=Iz8E5cFYfZE&list=RDIz8E5cFYfZE&start_radio=1">▶ Play</button>
+    </div>
+
+    <!-- SONG CARD 3 -->
+    <div class="song-card">
+        <img src="golden-vinyl-record-retro-music-vector-34099878 (1)-Photoroom (1).png" class="vinyl" />
+        <h2>Chura Liya Hai Tumne Jo Dil Ko</h2>
+        <button class="play-btn" data-link="https://www.youtube.com/watch?v=XuCp0r3vhPQ&list=RDXuCp0r3vhPQ&start_radio=1">▶ Play</button>
+    </div>
+
+    <!-- SONG CARD 5 -->
+    <div class="song-card">
+        <img src="golden-vinyl-record-retro-music-vector-34099878 (1)-Photoroom (1).png" class="vinyl" />
+        <h2>Abhi Na Jao Chhod Kar </h2>
+        <button class="play-btn" data-link="https://www.youtube.com/watch?v=mfEQgoVi7P4&list=RDmfEQgoVi7P4&start_radio=1">▶ Play</button>
+    </div>
+
+ <!-- SONG CARD 6 -->
+    <div class="song-card">
+        <img src="golden-vinyl-record-retro-music-vector-34099878 (1)-Photoroom (1).png" class="vinyl" />
+        <h2>Kya Hua Tera Wada</h2>
+        <button class="play-btn" data-link="https://www.youtube.com/watch?v=Z5D1dhTMclI&list=RDZ5D1dhTMclI&start_radio=1">▶ Play</button>
+    </div>
+</div>
+
+<!-- POPUP PLAYER -->
+<div id="player-popup">
+    <div class="player-box">
+        <iframe id="ytplayer" src="" allow="autoplay"></iframe>
+        <button id="closePlayer">✖</button>
+    </div>
+</div>
+
+<script src="songs.js"></script>
+</body>
+</html>

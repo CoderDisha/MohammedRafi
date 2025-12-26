@@ -1,0 +1,168 @@
+/* === GLOBAL THEME === */
+body {
+    margin: 0;
+    background: #000;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    color: gold;
+}
+
+/* === LOADER === */
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    color: gold;
+}
+
+.loader-radio {
+    width: 130px;
+    height: 80px;
+    background: linear-gradient(#222, #000);
+    border: 3px solid gold;
+    border-radius: 12px;
+    animation: shake 0.3s infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 0); }
+    50% { transform: translate(-1px, 0); }
+    100% { transform: translate(1px, 0); }
+}
+
+/* === MAIN PAGE === */
+#main {
+    display: none;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.title {
+    font-size: 50px;
+    color: gold;
+    letter-spacing: 3px;
+    text-shadow: 0 0 20px gold;
+}
+
+.subtitle {
+    margin-top: -10px;
+    font-size: 18px;
+    color: #ffdd80;
+    letter-spacing: 2px;
+}
+
+/* === RADIO IMAGE + ANIMATION === */
+.radio-container {
+    position: relative;
+    margin: 40px auto;
+    width: 300px;
+}
+
+.radio-img {
+    width: 100%;
+    filter: drop-shadow(0 0 12px gold);
+    animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* === MENU BUTTONS === */
+.menu {
+    margin-top: 50px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 10px;
+    border: 2px solid gold;
+    color: gold;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3s;
+    background: rgba(255, 215, 0, 0.1);
+}
+
+.btn:hover {
+    background: gold;
+    color: black;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px gold;
+}
+
+/* === GOLD PARTICLES === */
+#particles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background: radial-gradient(circle, rgba(255,215,0,0.1) 2px, transparent 2px);
+    background-size: 50px 50px;
+    animation: sparkle 4s linear infinite;
+}
+
+@keyframes sparkle {
+    from { opacity: 0.4; }
+    to { opacity: 0.8; }
+}
+
+/* GOLD PARTICLES */
+.gold-particle {
+    position: absolute;
+    border-radius: 50%;
+    background: gold;
+    pointer-events: none;
+    opacity: 0.4;
+    animation: float 4s infinite alternate ease-in-out;
+    width: 2px;
+    height: 2px;
+}
+
+@keyframes float {
+    from { transform: translateY(0) translateX(0); }
+    to { transform: translateY(-15px) translateX(5px); }
+}
+
+/* RESPONSIVE YEAR POSITION */
+@media (max-width: 600px) {
+    .timeline-item .year {
+        position: static;
+        display: block;
+        margin-bottom: 8px;
+        text-align: left;
+    }
+}
+#musicBtn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: gold;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.5rem;
+    box-shadow: 0 0 10px gold;
+    z-index: 999;
+    transition: 0.3s;
+}
+
+#musicBtn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px gold;
+}
+

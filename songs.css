@@ -1,0 +1,199 @@
+/* === GLOBAL THEME === */
+body {
+    margin: 0;
+    background: #000;
+    font-family: 'Poppins', sans-serif;
+    color: gold;
+    text-align: center;
+}
+
+/* === HEADER === */
+.title {
+    font-size: 40px;
+    margin-top: 20px;
+    text-shadow: 0 0 18px gold;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 8px 18px;
+    border: 2px solid gold;
+    border-radius: 8px;
+    color: gold;
+    text-decoration: none;
+    transition: .3s;
+    background: rgba(255,215,0,0.1);
+}
+
+.back-btn:hover {
+    background: gold;
+    color: black;
+    box-shadow: 0 0 15px gold;
+}
+
+/* === SONG LIST === */
+.song-list {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+.song-card {
+    width: 85%;
+    max-width: 500px;
+    padding: 20px;
+    border: 2px solid gold;
+    border-radius: 12px;
+    background: rgba(255, 215, 0, 0.08);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+    transition: .3s;
+}
+
+.song-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px gold;
+}
+
+/* === VINYL IMAGE === */
+.vinyl {
+    width: 120px;
+    filter: drop-shadow(0 0 10px gold);
+    transition: .3s;
+}
+
+/* Will spin only when JS adds class "spin" */
+.spin {
+    animation: rotateVinyl 2s linear infinite;
+}
+
+@keyframes rotateVinyl {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* === SONG TEXT === */
+.song-card h2 {
+    margin-top: 10px;
+    font-size: 22px;
+    color: #ffea9d;
+}
+
+/* === PLAY BUTTON === */
+.play-btn {
+    margin-top: 12px;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: 2px solid gold;
+    background: black;
+    color: gold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.play-btn:hover {
+    background: gold;
+    color: black;
+    box-shadow: 0 0 20px gold;
+}
+
+/* === PLAYER POPUP === */
+#player-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.player-box {
+    width: 90%;
+    max-width: 500px;
+    background: black;
+    border: 2px solid gold;
+    border-radius: 15px;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0 0 25px gold;
+}
+
+#ytplayer {
+    width: 100%;
+    height: 280px;
+    border: none;
+    border-radius: 10px;
+}
+
+#closePlayer {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: gold;
+    color: black;
+    border: none;
+    font-size: 20px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#closePlayer:hover {
+    transform: scale(1.1);
+}
+
+/* GOLD PARTICLES */
+.gold-particle {
+    position: absolute;
+    border-radius: 50%;
+    background: gold;
+    pointer-events: none;
+    opacity: 0.4;
+    animation: float 4s infinite alternate ease-in-out;
+    width: 2px;
+    height: 2px;
+}
+
+@keyframes float {
+    from { transform: translateY(0) translateX(0); }
+    to { transform: translateY(-15px) translateX(5px); }
+}
+
+/* RESPONSIVE YEAR POSITION */
+@media (max-width: 600px) {
+    .timeline-item .year {
+        position: static;
+        display: block;
+        margin-bottom: 8px;
+        text-align: left;
+    }
+}
+#musicBtn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: gold;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.5rem;
+    box-shadow: 0 0 10px gold;
+    z-index: 999;
+    transition: 0.3s;
+}
+
+#musicBtn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px gold;
+}

@@ -1,0 +1,123 @@
+/* === GLOBAL THEME === */
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    font-family: 'Poppins', sans-serif;
+    color: gold;
+    text-align: center;
+}
+
+/* === HEADER === */
+.title {
+    font-size: 40px;
+    margin-top: 20px;
+    text-shadow: 0 0 15px gold;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 8px 18px;
+    border: 2px solid gold;
+    color: gold;
+    border-radius: 8px;
+    text-decoration: none;
+    background: rgba(255,215,0,0.1);
+    transition: .3s;
+}
+
+.back-btn:hover {
+    background: gold;
+    color: black;
+    box-shadow: 0 0 20px gold;
+}
+
+/* === GALLERY GRID === */
+.gallery-container {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding-bottom: 50px;
+}
+
+/* === PHOTO CARDS (POLAROID STYLE) === */
+.photo-card {
+    width: 220px;
+    background: white;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px gold;
+    transition: .3s;
+    transform-origin: center;
+}
+
+.photo-card img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.photo-card p {
+    color: black;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* === TILT VARIATIONS (Vintage scattered look) === */
+.tilt1 { transform: rotate(-4deg); }
+.tilt2 { transform: rotate(3deg); }
+.tilt3 { transform: rotate(-2deg); }
+
+/* === HOVER EFFECTS === */
+.photo-card:hover {
+    transform: scale(1.08) rotate(0deg);
+    box-shadow: 0 0 30px gold;
+}
+/* GOLD PARTICLES */
+.gold-particle {
+    position: absolute;
+    border-radius: 50%;
+    background: gold;
+    pointer-events: none;
+    opacity: 0.4;
+    animation: float 4s infinite alternate ease-in-out;
+    width: 2px;
+    height: 2px;
+}
+
+@keyframes float {
+    from { transform: translateY(0) translateX(0); }
+    to { transform: translateY(-15px) translateX(5px); }
+}
+
+/* RESPONSIVE YEAR POSITION */
+@media (max-width: 600px) {
+    .timeline-item .year {
+        position: static;
+        display: block;
+        margin-bottom: 8px;
+        text-align: left;
+    }
+}
+#musicBtn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: gold;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.5rem;
+    box-shadow: 0 0 10px gold;
+    z-index: 999;
+    transition: 0.3s;
+}
+
+#musicBtn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px gold;
+}

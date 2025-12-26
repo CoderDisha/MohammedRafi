@@ -1,0 +1,169 @@
+/* ------------------------------
+   GLOBAL STYLING
+--------------------------------*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #000;
+    color: gold;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+.title {
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 40px;
+    text-shadow: 0 0 20px gold;
+}
+
+.back-btn {
+    display: inline-block;
+    margin: 10px auto;
+    padding: 8px 20px;
+    border: 2px solid gold;
+    color: gold;
+    border-radius: 10px;
+    text-decoration: none;
+    background: rgba(255,215,0,0.1);
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: gold;
+    color: black;
+    box-shadow: 0 0 20px gold;
+}
+
+/* TIMELINE */
+.timeline-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+    position: relative;
+}
+
+/* Vertical glowing line */
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    left: 30px;
+    top: 0;
+    background: rgba(255, 215, 0, 0.3);
+    border-radius: 2px;
+}
+
+/* TIMELINE ITEM */
+.timeline-item {
+    background: radial-gradient(circle at center, #222, #000);
+    border: 2px solid gold;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 25px 0;
+    position: relative;
+    box-shadow: 0 0 20px rgba(255,215,0,0.2);
+    cursor: pointer;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: all 0.6s ease-out;
+}
+
+/* YEAR */
+.timeline-item .year {
+    position: absolute;
+    left: -70px;
+    top: 20px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: gold;
+    text-shadow: 0 0 15px gold;
+}
+
+/* PARAGRAPH */
+.timeline-item p {
+    margin: 0;
+    color: #fff8;
+    line-height: 1.5;
+}
+
+/* VINYL ICON */
+.vinyl-hover {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.vinyl-hover img {
+    width: 100%;
+}
+
+.vinyl-hover:hover {
+    transform: rotate(360deg);
+}
+
+/* MINI FACT TYPEWRITER */
+.mini-fact {
+    font-size: 0.9rem;
+    color: #ffd700;
+    margin-top: 8px;
+    min-height: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid gold;
+}
+
+/* GOLD PARTICLES */
+.gold-particle {
+    position: absolute;
+    border-radius: 50%;
+    background: gold;
+    pointer-events: none;
+    opacity: 0.4;
+    animation: float 4s infinite alternate ease-in-out;
+    width: 2px;
+    height: 2px;
+}
+
+@keyframes float {
+    from { transform: translateY(0) translateX(0); }
+    to { transform: translateY(-15px) translateX(5px); }
+}
+
+/* RESPONSIVE YEAR POSITION */
+@media (max-width: 600px) {
+    .timeline-item .year {
+        position: static;
+        display: block;
+        margin-bottom: 8px;
+        text-align: left;
+    }
+}
+
+#musicBtn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: gold;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.5rem;
+    box-shadow: 0 0 10px gold;
+    z-index: 999;
+    transition: 0.3s;
+}
+
+#musicBtn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px gold;
+}
